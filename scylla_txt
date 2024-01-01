@@ -11,4 +11,5 @@ nslookup -type=a www.google.com
 netstat -n ( Lookig up Active internet connections)
 nc -l 1234
 nc 127.0.0.1 1234
+
 nc gmail-smtp-in.l.google.com 25
