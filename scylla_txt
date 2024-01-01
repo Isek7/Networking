@@ -7,6 +7,7 @@ printf 'HEAD / HTTP/1.1\r\nHost: www.google.com\r\n\r\n' | nc www.google.com 80
 
 nslookup www.google.com | grep Address | tail -n 1 | cut -d " " -f 2 | xargs curl
 nslookup -type=a www.google.com
+
 netstat -n ( Lookig up Active internet connections)
 nc -l 1234
 nc 127.0.0.1 1234
