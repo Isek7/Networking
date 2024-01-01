@@ -1,0 +1,13 @@
+//"sudo vi /etc/apt/sources.list.d/scylla.list"//
+
+vagrant init --box-version 1.0.282 hashicorp/bionic64 # or "20210429.0.0 ubuntu/focal64"
+
+printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
+printf 'HEAD / HTTP/1.1\r\nHost: www.google.com\r\n\r\n' | nc www.google.com 80
+
+nslookup www.google.com | grep Address | tail -n 1 | cut -d " " -f 2 | xargs curl
+nslookup -type=a www.google.com
+netstat -n ( Lookig up Active internet connections)
+nc -l 1234
+nc 127.0.0.1 1234
+nc gmail-smtp-in.l.google.com 25
