@@ -12,5 +12,12 @@ nslookup -type=a www.google.com
 netstat -n ( Lookig up Active internet connections)
 nc -l 1234
 nc 127.0.0.1 1234
-
 nc gmail-smtp-in.l.google.com 25
+
+//Ping and DNS in tcpdump
+ping -c3 8.8.8.8 and tcpdump -n host 8.8.8.8 (to cache network traffice b/w hosts and networks Tcpdump(MANTCPDUMP)
+ping yahoo.com (pinging DSN) and sudo tcpdump -n port 53
+
+//HTTP in tcpdump
+sudo tcpdump -n port 80 and printf 'HEAD / HTTP/1.1\r\nHost: example.net\r\n\r\n' | nc example.net 80
+sudo tcpdump -n host example.net and printf 'HEAD / HTTP/1.1\r\nHost: example.net\r\n\r\n' | nc example.net 80
